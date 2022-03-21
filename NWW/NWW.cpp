@@ -5,7 +5,12 @@ int main()
 {
 	int a;
 	int b;
-	int NWW;
+	
+	cout << "Podaj pierwszą liczbę:";
+	cin >> a;
+	cout << "Podaj drugą liczbę:";
+	cin >> b;
+
 	int iloczyn = a * b;
 
 	while (a != b)
@@ -13,6 +18,6 @@ int main()
 		if (a < b) b = b - a;
 		else a = a - b;
 	}
-	NWW = iloczyn / a;
-	cout << "Najmniejsza wspólna wielokrotność: " << NWW;
+	int NWW = iloczyn / a;
+	cout << "Najmniejsza wspólna wielokrotność: " << NWW << endl;
 }
