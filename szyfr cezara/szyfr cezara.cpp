@@ -15,9 +15,11 @@ int main()
 	cout << "Podaj klucz z przedziału [-26...26]: ";
 	cin >> klucz;
 
-	Szyfr;
+	Szyfr(klucz, tab);
 
 	cout << "Po zaszyfrowaniu: " << tab << endl;
+
+	Szyfr(-klucz, tab);
 
 	cout << "Po rozszyfrowaniu: " << tab << endl;
 
@@ -27,16 +29,16 @@ void Szyfr(int klucz, char tab[]) {
 
 	int dl = strlen(tab);
 
-	if (!(klucz >= -26 && klucz <= 26))
+	if (!(klucz >= -26 && klucz <= 26)) return;
 
 		if (klucz >= 0)
-			for (char i = 0; i < dl; i++) 
+			for (int i = 0; i < dl; i++) 
 			{
 				if (tab[i] + klucz <= 'z') tab[i] += klucz;
 				else tab[i] = tab[i] + klucz - 26;
 			}
 		else
-			for (char i; i < dl;i++) 
+			for (int i = 0; i < dl;i++) 
 			{
 			if (tab[i] + klucz >= 'a') tab[i] += klucz;
 		else tab[i] = tab[i] + klucz + 26;
